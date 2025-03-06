@@ -1,14 +1,11 @@
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+
 
 
 function About() {
     return (
-        <>
-            <Header />
-            <Footer />
-        </>
-        
+        <div>
+            <h1>Page à propos</h1>
+        </div>
     )
 }
 

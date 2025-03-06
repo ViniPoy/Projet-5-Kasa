@@ -1,0 +1,14 @@
+.card {
+    width: 340px;
+    height: 340px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    &__image {
+        width: 92%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}

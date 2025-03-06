@@ -1,13 +1,11 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
 
 
 function Logement() {
     return (
-        <>
-            <Header />
-            <Footer />
-        </>
+        <div>
+            <h1>Page fiche logement</h1>
+        </div>
     )
 }
 
