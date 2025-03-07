@@ -1,12 +1,11 @@
-import Photo from '../assets/image-1.png';
 import '../styles/Banner.scss'
 
 
-function Banner() {
+function Banner({ image, title, className = "", noFilter = false }) {
     return (
-        <div className='banner'>
-            <img className='banner__image' src={Photo} alt="Photo d'une crique en bord de mer" />
-            <h1 className='banner__title'>Chez vous, partout et ailleurs</h1>
+        <div className= {`banner ${className}`}>
+            <img className={`banner__image ${noFilter ? "banner__image--no-filter" : ""}`} src={image} alt="Bannière" />
+            {title && <h1 className='banner__title'>{title}</h1>}
         </div>
     )
 }

@@ -1,12 +1,12 @@
 import Banner from "../components/Banner"
 import Gallery from "../components/Gallery"
-
+import image1 from "../assets/image-1.png"
 
 
 function Home() {
     return (
         <div>
-            <Banner />
+            <Banner image={image1} title="Chez vous, partout et ailleurs" className="banner__home" />
             <Gallery />
         </div>
     )
