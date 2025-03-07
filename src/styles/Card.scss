@@ -1,14 +1,25 @@
+@import "Variables";
+
 .card {
     width: 340px;
     height: 340px;
     margin: 30px;
     display: flex;
-    justify-content: center;
-    align-items: baseline;
+    flex-direction: column-reverse;
+    justify-content: baseline;
+    align-items: flex-start;
     &__image {
         width: 92%;
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
+    }
+    &__title{
+        color: white;
+        background-color: $main-color;
+        border-radius: 0 10px 10px 0;
+        position: absolute;
+        max-width: 250px;
+        padding: 2px 10px 2px 10px;
     }
 }

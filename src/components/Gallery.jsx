@@ -1,5 +1,6 @@
 import Logements from '../datas/data.json'
 import Card from './Card'
+import '../styles/Gallery.scss'
 
 
 function Gallery() {
