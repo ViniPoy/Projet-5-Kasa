@@ -10,7 +10,7 @@ function AppRoutes() {
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/à-propos' element={<About />} />
-            <Route path='/fiche-logement' element={<Logement />} />
+            <Route path='/fiche-logement/:id' element={<Logement />} />
             <Route path='*' element={<NotFound />} />
         </Routes>
     )

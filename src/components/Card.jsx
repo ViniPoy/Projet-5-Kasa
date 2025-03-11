@@ -1,20 +1,21 @@
+import { Link } from 'react-router-dom'
 import '../styles/Card.scss'
 import PropTypes from 'prop-types'
 
 
 function Card({ id, cover, title }) {
     return (
-        <div key={id} className="card">
+        <Link key={id} className="card" to={`/fiche-logement/${id}`}>
             <img src={cover} className="card__image" alt={`${title} cover`} />
             <p className="card__title">{title}</p>
-        </div>
+        </Link>
     )
 }
 
 Card.PropTypes = {
-        id: PropTypes.number,
-        cover: PropTypes.string,
-        title: PropTypes.string
+        id: PropTypes.number.isRequired,
+        cover: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired
     }
 
 export default Card

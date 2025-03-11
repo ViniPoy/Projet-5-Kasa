@@ -4,9 +4,9 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    max-width: 80vw;
     justify-content: center;
     background-color: $background-color;
     margin: 30px auto;
-    width: 92%;
     border-radius: 20px;
 }

@@ -3,17 +3,19 @@
 .card {
     width: 340px;
     height: 340px;
-    margin: 30px;
+    margin: 50px;
     display: flex;
     flex-direction: column-reverse;
     justify-content: baseline;
     align-items: flex-start;
+    
     &__image {
-        width: 92%;
+        width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
     }
+
     &__title{
         color: white;
         background-color: $main-color;

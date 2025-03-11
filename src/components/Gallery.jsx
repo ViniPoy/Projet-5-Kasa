@@ -7,7 +7,7 @@ function Gallery() {
     return (
         <div className='gallery'>
             {Logements.map(Logement => (
-                <Card key={Logement.id} title={Logement.title} cover={Logement.cover} />
+                <Card key={Logement.id} id={Logement.id} title={Logement.title} cover={Logement.cover} />
             ))}
         </div>
     )
