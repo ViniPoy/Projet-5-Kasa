@@ -12,7 +12,17 @@ function Dropdown({ title, content }) {
                 <h1 className="dropdown__title">{title}</h1>
                 <img src={Vector} className="dropdown__arrow" onClick={() => setIsOpen(!isOpen)} />
             </div>
-            <p className="dropdown__content">{content}</p>
+            <div className="dropdown__content">
+                {Array.isArray(content) ? (
+                    <ul>
+                        {content.map((item, index) => (
+                            <li className="dropdown__content--list" key={index}>{item}</li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>{content}</p>
+                )}
+            </div>
         </div>
     )
 }

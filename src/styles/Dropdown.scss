@@ -5,6 +5,7 @@
     margin: 20px auto;
 
     &__header {
+        position: relative;
         background-color: $main-color;
         border-radius: 5px;
         display: flex;
@@ -19,9 +20,16 @@
     }
 
     &__arrow {
-        cursor: pointer;
+        position: absolute;
+        top: 18px;
+        right: 18px;
         display: block;
+        width: auto;
+        height: auto;
         transition: transform 0.3s ease-in-out;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &--open &__arrow {
@@ -38,6 +46,10 @@
         max-height: 0;
         transform: translateY(-10px);
         transition: all 0.2s ease-in-out ;
+
+        &--list {
+            list-style: none;
+        }
     }
 
     &--open {

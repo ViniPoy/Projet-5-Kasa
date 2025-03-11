@@ -11,13 +11,15 @@ function Slideshow({ images }) {
     const [direction, setDirection] = useState(1);
 
     function nextSlide() {
+        setDirection(0);
         setDirection(1);
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }
 
     function prevSlide() {
+        setDirection(0);
         setDirection(-1);
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     }
 
     return (
@@ -35,8 +37,8 @@ function Slideshow({ images }) {
             </AnimatePresence>
             {images.length > 1 && (
                 <div className='slideshow__nav'>
-                    <img className='slideshow__prev' src={leftVector} onClick={prevSlide} />
-                    <img className='slideshow__next' src={rightVector} onClick={nextSlide} />
+                    <img className='slideshow__prev' src={leftVector} onClick={prevSlide} alt='Précédent' />
+                    <img className='slideshow__next' src={rightVector} onClick={nextSlide} alt='Suivant' />
                 </div>
             )}
             {images.length > 1 && <p className='slideshow__counter'>{currentIndex + 1} / {images.length}</p>}
@@ -44,7 +46,7 @@ function Slideshow({ images }) {
     )
 }
 
-Slideshow.PropTypes = {
+Slideshow.propTypes = {
     images: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 

@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Logements from '../datas/data.json';
 import Slideshow from "../components/Slideshow";
 import { useEffect } from "react";
+import InfoLogement from "../components/Info-Logement";
 
 
 function FicheLogement() {
@@ -20,6 +21,7 @@ function FicheLogement() {
     return (
         <div className="fiche-logement">
             <Slideshow images={logement.pictures} />
+            <InfoLogement description={logement.description} equipments={logement.equipments} />
         </div>
     )
 }
