@@ -11,13 +11,11 @@ function Slideshow({ images }) {
     const [direction, setDirection] = useState(1);
 
     function nextSlide() {
-        setDirection(0);
         setDirection(1);
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }
 
     function prevSlide() {
-        setDirection(0);
         setDirection(-1);
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     }

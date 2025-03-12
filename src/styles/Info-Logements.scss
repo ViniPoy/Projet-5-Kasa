@@ -1,19 +1,38 @@
 .logement {
     max-width: 80vw;
     margin: 0 auto;
+
     &__infos{
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+
+        @media (max-width: 599px) {
+            flex-direction: column;
+        }
+
         &__owner-rate {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+
+            @media (max-width: 599px) {
+                width: 100%;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
     }
+
     &__dropdown {
         display: flex;
         justify-content: space-between;
         gap: 100px;
+
+        @media (max-width: 599px) {
+            flex-direction: column;
+            gap: 0;
+        }
     }
 }

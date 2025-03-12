@@ -5,9 +5,14 @@
     height: 340px;
     margin: 50px;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: baseline;
+    flex-direction: column;
+    justify-content: end;
     align-items: flex-start;
+
+    @media (max-width: 599px) {
+        min-width: 80vw;
+        margin: 15px;
+    }
     
     &__image {
         width: 100%;

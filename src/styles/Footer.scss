@@ -6,11 +6,22 @@
     align-items: center;
     padding: 15px;
     margin-top: 50px;
+
     &__logo {
         padding-top: 30px;
         padding-bottom: 10px;
+
+        @media (max-width: 599px) {
+            padding-bottom: 0;
+        }
     }
+
     &__info {
         color: white;
+
+        @media (max-width: 599px) {
+            width: 30%;
+            text-align: center;
+        }
     }
 }
