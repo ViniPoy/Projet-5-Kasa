@@ -1,0 +1,16 @@
+@import 'Variables';
+
+.host{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 150px;
+    &__name {
+        color: $main-color;
+        font-weight: 500;
+    }
+    &__picture {
+        border-radius: 50%;
+        max-height: 70px;
+    }
+}

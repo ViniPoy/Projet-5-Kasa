@@ -1,0 +1,16 @@
+@import 'Variables';
+
+.tags-container {
+    display: flex;
+    gap: 10px;
+    &__tag {
+        background-color: $main-color;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        min-width: 100px;
+        border-radius: 20px;
+        font-size: small;
+        font-weight: 600;
+    }
+}

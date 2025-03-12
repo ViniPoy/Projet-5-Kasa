@@ -1,0 +1,13 @@
+@import 'Variables';
+
+.title {
+    &__main {
+        color: $main-color;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    &__location {
+        font-weight: 500;
+        margin-top: 5px;
+    }
+}
