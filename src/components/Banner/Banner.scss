@@ -15,16 +15,21 @@
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
-        filter: brightness(0.5);
-
-        &--no-filter{
-            filter: none;
-        }
     }
 
     &__title {
         position:absolute;
         color: white;
         padding-left: 20px;
+    }
+
+    &--home {
+        .banner__image {
+            filter: brightness(0.5);
+        }
+    }
+
+    &--about {
+        padding-bottom: 40px;
     }
 }

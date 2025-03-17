@@ -6,7 +6,7 @@ import image1 from "../../assets/image-1.png"
 function Home() {
     return (
         <div>
-            <Banner image={image1} title="Chez vous, partout et ailleurs" className="banner__home" />
+            <Banner image={image1} title="Chez vous, partout et ailleurs" className="banner--home" />
             <Gallery />
         </div>
     )

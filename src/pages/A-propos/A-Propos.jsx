@@ -9,7 +9,7 @@ import './A-propos.scss';
 function About() {
     return (
         <div className="about">
-            <Banner image={image2} noFilter className="banner__about" />
+            <Banner image={image2} className="banner--about" />
             {aboutData.map((item, index) => (
                 <Dropdown key={index} title={item.title} content={item.content} />
             ))}
