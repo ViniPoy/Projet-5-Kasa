@@ -1,5 +1,5 @@
 import Logo from '../../assets/KASA.png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.scss'
 
 
@@ -8,8 +8,10 @@ function Header() {
         <header className='header'>
             <img className='header__logo' src={Logo} alt='Logo de KASA' />
             <nav className='header__navbar'>
-                <Link className='header__navbar__link' to='/'>Accueil</Link>
-                <Link className='header__navbar__link' to='/à-propos'>À propos</Link>
+                {/* J'utilise NavLink au lieu de Link pour ajouter une classe active aux liens
+                    et le laisser soulignés lorsqu'on se trouve sur la page correspondante, comme sur le figma */}
+                <NavLink className='header__navbar__link' to='/'>Accueil</NavLink>
+                <NavLink className='header__navbar__link' to='/à-propos'>À propos</NavLink>
             </nav>
         </header>
     )

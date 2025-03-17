@@ -30,6 +30,10 @@
             font-size: 23px;
             font-weight: 500;
 
+            &.active {
+                text-decoration: underline;
+            }
+
             @media (max-width: 599px) {
                 font-size: 17px;
                 text-transform: uppercase;

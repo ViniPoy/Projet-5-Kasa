@@ -32,14 +32,15 @@
         display: block;
         width: auto;
         height: auto;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out; // Ajoute une animation fluide à la rotation
         &:hover {
             cursor: pointer;
         }
     }
 
+    //Lorsque le collapse est ouvert, la flèche tourne de 180° de façon fluide avec transition déclarée dans __arrow
     &--open &__arrow {
-        transform: rotate(- 180deg);
+        transform: rotate(-180deg); //Le - ici sert uniquement à être raccord avec le figma.
     }
 
     &__content {
@@ -48,22 +49,23 @@
         margin-top: 0;
         border-radius: 0 0 5px 5px;
         overflow: hidden;
-        opacity: 0;
-        max-height: 0;
-        transform: translateY(-10px);
-        transition: all 0.2s ease-in-out ;
+        //À partir de la les propriété sont à prendre en compte dans l'animation
+        opacity: 0; //Le contenu est invisible par défaut, rend l'animation plus fluide
+        max-height: 0; //Empêche l'espacement prévu par le contenu en limitant sa hauteur à 0
+        transform: translateY(-10px); //Décale le contenu vers le haut pour un effet de slide down au moment de l'animation 
+        transition: all 0.2s ease-in-out ; //Ajoute une animation fluide sur les éléménets ci-dessus
 
         &--list {
             list-style: none;
         }
     }
 
+    //Lorsque le collapse est ouvert, l'animation se joue de manière fluide sur les propriétés suivantes:
     &--open {
         .dropdown__content {
-            opacity: 1;
-            max-height: 500px;
-            transform: translateY(0);
-            padding: 10px 20px;
+            opacity: 1; //Le contenu apparait progressivement
+            max-height: 500px; //Ajuste la hauteur por révéler le contenu
+            transform: translateY(0); //Remet le contenu à sa place normale, comme si il desscendait du collapse.
         } 
     }
 }

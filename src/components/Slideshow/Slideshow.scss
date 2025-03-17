@@ -1,3 +1,53 @@
+//Déclaration des keyframes pour les différentes animation d'entrées et de sorties
+
+//Sortie gauche avec effet de disparition (opacity)
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+//Sortie droite avec effet de disparition
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+//Entrée droite avec effet d'apparition
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+//Entrée gauche avec effet d'apparition
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .slideshow {
     display: flex;
     justify-content: center;
@@ -9,50 +59,56 @@
     padding-bottom: 30px;
     border-radius: 20px;
     height: 500px;
-    overflow: hidden;
+    overflow: hidden; //Empêche les images de dépasser lors des transitions
 
     @media (max-width: 599px) {
         height: 350px;
     }
 
+    //En fonction de la classe appliquée avec le state
     &__pictures {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
         position: absolute;
-        transition: transform 0.5s ease-in-out;
 
+        //L'image sortante se situe derrière l'image entrante pour faire croire qu'elle quitte l'écran
         &--exit {
             position: absolute;
             z-index: 1;
         }
 
+        // L'animation se joue lorsque l'on appuie sur la flèche gauche (image actuelle sort à gauche)
         &--exit-left {
             animation: slideOutLeft 0.5s ease-in-out forwards;
         }
 
+        // L'animation se joue lorsque l'on appuie sur la flèche droite (image actuelle sort à droite)
         &--exit-right {
             animation: slideOutRight 0.5s ease-in-out forwards;
         }
 
+        //(Donc l'image entrante se situe devant pour faire croire qu'elle recouvre l'ancienne image)
         &--enter {
             position: absolute;
             z-index: 2;
         }
 
+        // L'animation se joue lorsque l'on appuie sur la flèche gauche (nouvelle image arrive de la droite)
         &--enter-left {
-            animation: slideInLeft 0.5s ease-in-out;
+            animation: slideInRight 0.5s ease-in-out;
         }
 
+        // L'animation se joue lorsque l'on appuie sur la flèche droite (nouvelle image arrive de la gauche)
         &--enter-right {
-            animation: slideInRight 0.5s ease-in-out;
+            animation: slideInLeft 0.5s ease-in-out;
         }
     }
 
     &__nav {
         position: absolute;
-        z-index: 3;
+        z-index: 3; //Les flèches restent visibles devant les images quoiqu'il arrive
         width: 95%;
         display: flex;
         justify-content: space-between;
@@ -73,51 +129,7 @@
         font-weight: 700;
         color: white;
         position: absolute;
-        z-index: 3;
+        z-index: 3; //Le compteur se comporte comme les flèches
         bottom: 8%;
-    }
-}
-
-@keyframes slideOutLeft {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-}
-
-@keyframes slideOutRight {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
     }
 }
