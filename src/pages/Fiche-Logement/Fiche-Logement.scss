@@ -11,6 +11,14 @@
             flex-direction: column;
         }
 
+        &__title-tags {
+            max-width: 70%;
+
+            @media (max-width: 599px) {
+                max-width: 100%;
+            }
+        }
+
         &__owner-rate {
             display: flex;
             flex-direction: column;

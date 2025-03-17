@@ -17,6 +17,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
+        z-index: 2;
     }
 
     &__title {
@@ -49,10 +50,11 @@
         margin-top: 0;
         border-radius: 0 0 5px 5px;
         overflow: hidden;
+        z-index: 1;
         //À partir de la les propriété sont à prendre en compte dans l'animation
         opacity: 0; //Le contenu est invisible par défaut, rend l'animation plus fluide
         max-height: 0; //Empêche l'espacement prévu par le contenu en limitant sa hauteur à 0
-        transform: translateY(-10px); //Décale le contenu vers le haut pour un effet de slide down au moment de l'animation 
+        transform: translateY(-30%); //Décale le contenu vers le haut pour un effet de slide down au moment de l'animation 
         transition: all 0.2s ease-in-out ; //Ajoute une animation fluide sur les éléménets ci-dessus
 
         &--list {
