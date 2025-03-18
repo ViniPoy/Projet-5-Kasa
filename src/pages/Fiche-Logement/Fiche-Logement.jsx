@@ -25,10 +25,11 @@ function FicheLogement() {
     }, []);
 
     useEffect(() => {
+        //Si le logement ne correspond a aucun id, on redirige sur la page d'erreur.
         if (!logement) {
-            navigate("/logement-invalide", { replace: true });
+            navigate("/logement-invalide");
         }
-    }, [logement, navigate]);
+    }, [logement, navigate]); //Le useEffect s'éxecute à chaque fois que 'logment' ou 'navigate' change.
 
     //On évite un rendu incorrect en attendant la redirection de la route d'erreur
     if (!logement) return null;
