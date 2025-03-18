@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import Logements from '../../datas/data.json';
 import Slideshow from "../../components/Slideshow/Slideshow";
@@ -14,6 +14,7 @@ import './Fiche-Logement.scss';
 function FicheLogement() {
     //Récupération de l'id du logement à partir de l'URL via le hook useParams
     const {id} = useParams();
+    const navigate = useNavigate();
     //Recherche du logement correspondant à l'id dans la liste des logements
     //La comparaison est faite en convertissant l'id du logement en string
     const logement = Logements.find((logement) => logement.id.toString() === id);
@@ -22,6 +23,12 @@ function FicheLogement() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    useEffect(() => {
+        if (!logement) {
+            navigate("/logement-invalide", { replace: true });
+        }
+    }, [logement, navigate]);
 
     //On évite un rendu incorrect en attendant la redirection de la route d'erreur
     if (!logement) return null;

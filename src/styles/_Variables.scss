@@ -1,2 +1,9 @@
 $main-color: #ff6060;
+$secondary-color: white;
 $background-color: #f7f7f7;
+$alternate-background-color: black;
+
+@mixin general-width {
+    width: 100%;
+    max-width: 80vw;
+}

@@ -1,5 +1,7 @@
+@import "../../styles/Variables";
+
 .footer {
-    background-color: black;
+    background-color: $alternate-background-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +19,7 @@
     }
 
     &__info {
-        color: white;
+        color: $secondary-color;
 
         @media (max-width: 599px) {
             width: 30%;
