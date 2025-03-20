@@ -11,7 +11,7 @@ function Header() {
                 {/* J'utilise NavLink au lieu de Link pour ajouter une classe active aux liens
                     et le laisser soulignés lorsqu'on se trouve sur la page correspondante, comme sur le figma */}
                 <NavLink className='header__navbar__link' to='/'>Accueil</NavLink>
-                <NavLink className='header__navbar__link' to='/à-propos'>À propos</NavLink>
+                <NavLink className='header__navbar__link' to='/a-propos'>À propos</NavLink>
             </nav>
         </header>
     )
