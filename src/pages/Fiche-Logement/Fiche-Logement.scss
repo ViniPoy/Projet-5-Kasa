@@ -1,6 +1,9 @@
+@import "../../styles/Variables";
+
 .logement {
     max-width: 80vw;
     margin: 0 auto;
+    @include general-width;
 
     &__infos{
         display: flex;

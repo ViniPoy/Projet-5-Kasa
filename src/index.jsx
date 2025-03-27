@@ -10,8 +10,10 @@ import './styles/index.scss';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
+      <div className='body-wraper'>
           <Header />
           <AppRoutes />
+      </div>
           <Footer />  
       </Router>
   </StrictMode>,

@@ -4,6 +4,7 @@
     width: 100%;
     max-width: 70vw;
     margin: 20px auto;
+    @include general-width;
 
     @media (max-width: 599px) {
         max-width: 80vw;
